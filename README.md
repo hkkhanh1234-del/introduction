@@ -1,209 +1,265 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio — Kim Khánh</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfolio — Huỳnh Kim Khánh</title>
 
-  <meta property="og:title" content="Portfolio — Kim Khánh" />
-  <meta property="og:locale" content="vi_VN" />
-  <meta property="og:site_name" content="Kim Khánh Portfolio" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary" />
-  <meta property="twitter:title" content="Portfolio — Kim Khánh" />
+<meta property="og:title" content="Portfolio — Huỳnh Kim Khánh" />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:site_name" content="Huỳnh Kim Khánh Portfolio" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Portfolio — Huỳnh Kim Khánh" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"Portfolio — Huỳnh Kim Khánh","name":"Huỳnh Kim Khánh Portfolio"}
+</script>
 
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","headline":"Kim Khánh Portfolio","name":"Kim Khánh Portfolio"}
-  </script>
+<style>
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  background: url("https://raw.githubusercontent.com/daisubinta/Nhom4tin12anh.github.io/refs/heads/main/beach-wallpaper-3840x2160-sandy-shore-sunset-12590.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  color:#111827;
+}
 
-  <style>
-    :root {
-      --card: rgba(255,255,255,0.88);
-      --text: #111827;
-      --muted: #374151;
-    }
+header {
+  text-align:center;
+  padding:90px 20px 40px;
+  position:relative;
+}
+header h1 {
+  font-size:54px;
+  font-weight:900;
+  margin:0;
+  color:#fff;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  filter:drop-shadow(0 0 28px rgba(255,255,255,0.8))
+         drop-shadow(0 0 48px rgba(37,99,235,0.6));
+  animation:titleGlow 2.5s infinite alternate ease-in-out;
+}
+@keyframes titleGlow {
+  from{opacity:0.9;transform:scale(1);}
+  to{opacity:1;transform:scale(1.05);}
+}
 
-    * { box-sizing: border-box; }
+header p {
+  font-size:20px;
+  font-weight:600;
+  color:white;
+  text-shadow:0 0 18px rgba(255,255,255,0.6);
+}
 
-    body {
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
-      margin: 0;
-      line-height: 1.6;
-      overflow-x: hidden;
+.container {
+  max-width:1000px;
+  margin:20px auto 60px;
+  padding:20px;
+}
 
-      /* Beach background */
-      background: url("https://raw.githubusercontent.com/daisubinta/Nhom4tin12anh.github.io/refs/heads/main/beach-wallpaper-3840x2160-sandy-shore-sunset-12590.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+.card {
+  display:flex;
+  flex-wrap:wrap;
+  border-radius:22px;
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(12px);
+  box-shadow:0 15px 45px rgba(0,0,0,0.25);
+  transition:0.5s;
+  transform-style:preserve-3d;
+}
+.card:hover{
+  transform:perspective(900px) rotateX(5deg) rotateY(-5deg) scale(1.02);
+  box-shadow:0 22px 58px rgba(37,99,235,0.3), 0 0 30px rgba(255,255,255,0.4);
+}
 
-    /* Typing text effect */
-    .typing {
-      font-size: 18px;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid rgba(255,255,255,0.7);
-      display: inline-block;
-      padding-right: 6px;
-      animation: blink 0.7s infinite;
-    }
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
+.left {
+  flex:1 1 260px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:35px;
+}
+.avatar {
+  width:240px;
+  height:240px;
+  border-radius:16px;
+  overflow:hidden;
+  border:5px solid rgba(255,255,255,0.6);
+  box-shadow:0 6px 26px rgba(0,0,0,0.2);
+}
+.avatar img{
+  width:100%;height:100%;object-fit:cover;
+}
 
-    header {
-      text-align: center;
-      padding: 60px 20px 30px;
-      backdrop-filter: brightness(1.05);
-    }
+.right {
+  flex:2 1 340px;
+  padding:35px 45px;
+}
+.right h2{
+  font-size:38px;font-weight:800;margin:0 0 14px;
+  filter:drop-shadow(0 0 8px rgba(37,99,235,0.4));
+}
 
-    header h1 {
-      font-size: 34px;
-      margin: 0 0 12px;
-      color: #fff;
-      text-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
+.section {
+  margin-top:26px;
+  padding:18px 24px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.64);
+  backdrop-filter:blur(6px);
+  box-shadow:inset 0 3px 10px rgba(0,0,0,0.03);
+  border-left:4px solid rgba(37,99,235,0.4);
+}
 
-    header p {
-      margin: 0;
-      color: #fff;
-      text-shadow: 0 3px 8px rgba(0,0,0,0.25);
-      font-size: 16px;
-    }
+.section h3 {
+  font-size:24px;
+  margin:0 0 10px;
+  font-weight:700;
+}
 
-    .container {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 20px;
-      flex: 1;
-    }
+footer {
+  text-align:center;
+  padding:30px 0;
+  margin-top:auto;
+}
 
-    .card {
-      background: var(--card);
-      border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-      overflow: hidden;
-      display: flex;
-      flex-wrap: wrap;
-      color: var(--text);
-      backdrop-filter: blur(6px);
-    }
+.btn-home {
+  display:inline-block;
+  padding:14px 28px;
+  font-size:17px;
+  font-weight:700;
+  color:#111;
+  border-radius:50px;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(10px);
+  box-shadow:0 6px 20px rgba(255,255,255,0.4);
+  transition:0.3s;
+  text-decoration:none;
+}
+.btn-home:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 26px rgba(255,255,255,0.6);
+}
 
-    .left {
-      flex: 1 1 260px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 25px;
-      background: rgba(255,255,255,0.3);
-    }
-
-    .avatar {
-      width: 240px;
-      height: 240px;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 4px solid rgba(255,255,255,0.6);
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    }
-
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .right {
-      flex: 2 1 340px;
-      padding: 26px 36px;
-    }
-
-    .right h2 {
-      font-size: 26px;
-      margin: 0 0 6px;
-    }
-
-    .meta {
-      font-size: 15px;
-      margin-bottom: 12px;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .about {
-      background: rgba(255,255,255,0.6);
-      padding: 16px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.4);
-      font-size: 15px;
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.04);
-    }
-
-    footer {
-      text-align: center;
-      padding: 22px 0;
-      font-size: 14px;
-      color: #fff;
-      text-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    }
-
-    /* Typing animation controller */
-    @keyframes typeWriter {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    .typing.run {
-      animation: 
-        typeWriter 3.5s steps(36) 1 forwards,
-        blink 0.7s infinite;
-    }
-
-  </style>
+/* BALLOONS */
+.balloon {
+  position:absolute;
+  bottom:-140px;
+  border-radius:50%;
+  opacity:0.8;
+  animation:floatUp linear infinite;
+  filter:blur(0.5px);
+}
+@keyframes floatUp{
+  0%{transform:translateY(0);}
+  100%{transform:translateY(-120vh);}
+}
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <h1>Giới thiệu bản thân</h1>
-  <p><span id="typeText" class="typing"></span></p>
+  <h1>Huỳnh Kim Khánh</h1>
+  <p>✍️ Copywriter • 📘 Language Explorer • 🌊 Ocean Lover</p>
 </header>
 
+<!-- BALLOON SCRIPT -->
 <script>
-  const text = "Xin chào! Mình là Kim Khánh 🌊 Chào mừng bạn đến với portfolio của mình!";
-  const typeText = document.getElementById("typeText");
-  typeText.classList.add("run");
-  typeText.textContent = text;
+const balloonCount = 14;
+for (let i = 0; i < balloonCount; i++) {
+  const b = document.createElement("div");
+  b.className = "balloon";
+  const size = 52 + Math.random()*38;
+  b.style.width = size+"px";
+  b.style.height = size*1.26+"px";
+  b.style.left = Math.random()*100+"vw";
+  b.style.animationDuration = 7 + Math.random()*6 + "s";
+  b.style.animationDelay = Math.random()*4 + "s";
+  document.body.appendChild(b);
+}
 </script>
 
+<!-- MAIN CONTENT -->
 <div class="container">
+
   <div class="card">
+
     <div class="left">
       <div class="avatar">
-        <img src="https://raw.githubusercontent.com/daisubinta/Nhom4tin12anh.github.io/refs/heads/main/golden-retriever-tongue-out.jpg" alt="Ảnh cá nhân Khánh" />
+        <img src="https://raw.githubusercontent.com/daisubinta/Nhom4tin12anh.github.io/refs/heads/main/golden-retriever-tongue-out.jpg" alt="Avatar Khánh"/>
       </div>
     </div>
 
     <div class="right">
-      <h2>Huỳnh Kim Khánh</h2>
-      <div class="meta">🎓 Học sinh lớp 12A • ✍️ Direct-response copywriting • 🌅 Yêu biển & khám phá</div>
+      <h2>Kim Khánh</h2>
+      <div class="meta">🎓 Học sinh lớp 12A • ✨ Direct-response Copywriting • 🌅 Creativity & Connection</div>
 
-      <div class="about">
+      <div class="section">
+        <h3>🧑‍💻 About Me</h3>
         <p>
-          Mình đang trên hành trình học ngôn ngữ và sáng tạo nội dung viết để kết nối cảm xúc với mọi người.  
-          Sở thích của mình là <strong>bơi</strong> 🏊, <strong>đi biển</strong> 🌊 và đọc sách phát triển bản thân 📖.  
-          Mình tin rằng mỗi con chữ đều có năng lượng — đặc biệt khi nói về những điều mình yêu. 🌱✨
+          Mình là Huỳnh Kim Khánh (thường gọi là Kim Khánh/Khánh), hiện là học sinh lớp 12A.  
+          Mình đang xây dựng con đường freelancer trong lĩnh vực sáng tạo nội dung viết và marketing.
+          Phong cách của mình thiên về <strong>Direct–Response Copywriting</strong> — tập trung vào cảm xúc, hành vi khách hàng và tạo chuyển đổi thực tế.
         </p>
       </div>
+
+      <div class="section">
+        <h3>📘 Language Journey</h3>
+        <ul>
+          <li>🇬🇧 <strong>English:</strong> Advanced - mong muốn đạt aim IELTS  </li>
+          <li>🇪🇸 <strong>Spanish:</strong> Beginner — đang luyện giao tiếp cơ bản</li>
+          <li>🇨🇳 <strong>Chinese:</strong> HSK nền tảng — đang học bài 1 “Nǐ hǎo”</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>✍️ Copywriting & Skills</h3>
+        <ul>
+          <li>Email Marketing & Lead Nurturing</li>
+          <li>Landing Page (Bulldogology, Pet Brand…)</li>
+          <li>Canva Design, Translation & Content Creation</li>
+          <li>Writing for Psychology-driven campaigns</li>
+          <li>Storytelling in sales copy format</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>🌊 Hobbies</h3>
+        <p>
+          Khi không viết, mình thường:
+        </p>
+        <ul>
+          <li>🏊 Bơi lội thư giãn & rèn endurance</li>
+          <li>🌅 Đi biển — đặc biệt lúc hoàng hôn</li>
+          <li>📖 Đọc sách self-growth: <em>The Perfection Trap</em></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>🎯 Future Goals</h3>
+        <ul>
+          <li>🔥 Tăng tốc kỹ năng Marketing trên Instagram/TikTok/YouTube</li>
+          <li>🚀 Build personal brand về ngôn ngữ & copywriting</li>
+          <li>📊 Học finance (stock, fintech, AI in finance)</li>
+          <li>💛 Viết nội dung có chiều sâu và kết nối</li>
+        </ul>
+      </div>
+
     </div>
+
   </div>
 </div>
 
-<footer>© 2025 — Designed by Khánh 🌟</footer>
+<!-- FOOTER WITH HOME BUTTON -->
+<footer>
+  <a class="btn-home" href="javascript:history.back()">⬅️ Quay lại trang chính</a>
+</footer>
 
 </body>
 </html>
