@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio — Kim Khánh</title>
 
-  <!-- SEO / Social sharing tags (giữ cấu trúc giống trang mẫu) -->
+  <!-- SEO / Social sharing tags -->
   <meta property="og:title" content="Portfolio — Kim Khánh" />
   <meta property="og:locale" content="vi_VN" />
   <meta property="og:site_name" content="Kim Khánh Portfolio" />
@@ -33,12 +33,34 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
+      overflow-x: hidden;
     }
+
+    /* HEADER & SUNLIGHT EFFECT */
     header {
+      position: relative;
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: #fff;
       padding: 48px 20px;
       text-align: center;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(
+         120deg,
+         rgba(255,255,255,0) 10%,
+         rgba(255,255,255,0.25) 45%,
+         rgba(255,255,255,0) 80%
+      );
+      animation: sunlight 5s infinite linear;
+    }
+    @keyframes sunlight {
+      0% { transform: translateX(-100%) skewX(-15deg); }
+      100% { transform: translateX(100%) skewX(-15deg); }
     }
     header h1 { font-size: 36px; margin: 0 0 10px; }
     header p { font-size: 16px; margin: 0; opacity: 0.9; }
@@ -48,7 +70,6 @@
       margin: 40px auto;
       padding: 20px;
     }
-
     .card {
       background: var(--card);
       border-radius: 16px;
@@ -56,8 +77,9 @@
       overflow: hidden;
       display: flex;
       flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
     }
-
     .left {
       flex: 1 1 280px;
       background: #eef2ff;
@@ -93,7 +115,6 @@
       color: var(--muted);
       margin-bottom: 16px;
     }
-
     .about {
       background: #f9fafb;
       padding: 16px;
@@ -101,32 +122,55 @@
       border: 1px solid #e5e7eb;
       min-height: 120px;
     }
-
     footer {
       text-align: center;
       padding: 20px 0;
       color: var(--muted);
       font-size: 14px;
+      margin-top: 40px;
     }
 
-    @media(max-width: 720px){
-      .right { padding: 20px; }
-      header h1 { font-size: 28px; }
+    /* BALLOON EFFECT */
+    .balloon {
+      position: absolute;
+      bottom: -120px;
+      width: 60px;
+      height: 80px;
+      border-radius: 50%;
+      opacity: 0.85;
+      animation: floatUp linear infinite;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-110vh); }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Giới thiệu bản thân </h1>
+    <h1>Giới thiệu bản thân</h1>
     <p>✍️ Copywriter • 📘 Ngôn ngữ • 🌊 Người yêu biển</p>
   </header>
+
+  <!-- BALLOONS -->
+  <script>
+    const balloonCount = 8;
+    for (let i = 0; i < balloonCount; i++) {
+      const b = document.createElement("div");
+      b.className = "balloon";
+      b.style.left = Math.random() * 100 + "vw";
+      b.style.animationDuration = 8 + Math.random() * 6 + "s";
+      b.style.animationDelay = Math.random() * 5 + "s";
+      document.body.appendChild(b);
+    }
+  </script>
 
   <div class="container">
     <div class="card">
       <div class="left">
         <div class="avatar">
-          <img src="(https://githubusercontent.com/daisubinta/Nhom4tin12anh.github.io/refs/heads/main/golden-retriever-tongue-out.jpg)" alt="Ảnh cá nhân Khánh" />
+          <img src="https://raw.githubusercontent.com/daisubinta/Nhom4tin12anh.github.io/refs/heads/main/golden-retriever-tongue-out.jpg" alt="Ảnh cá nhân Khánh" />
         </div>
       </div>
 
