@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio — Khánh</title>
+  <title>Portfolio — Kim Khánh</title>
 
   <!-- SEO / Social sharing tags (giữ cấu trúc giống trang mẫu) -->
   <meta property="og:title" content="Portfolio — Kim Khánh" />
@@ -11,10 +11,10 @@
   <meta property="og:site_name" content="Kim Khánh Portfolio" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <meta property="twitter:title" content="Portfolio — Khánh" />
+  <meta property="twitter:title" content="Portfolio — Kim Khánh" />
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","headline":"Portfolio — Khánh","name":"Khánh Portfolio"}
+  {"@context":"https://schema.org","@type":"WebSite","headline":"Portfolio — Kim Khánh","name":"Kim Khánh Portfolio"}
   </script>
 
   <style>
@@ -131,12 +131,12 @@
       </div>
 
       <div class="right">
-        <h2>Khánh</h2>
+        <h2>Huỳnh Kim Khánh</h2>
         <div class="meta">🎓 Học sinh lớp 12A</div>
 
         <div class="about">
           <p>
-            Xin chào! Mình là <strong>Khánh</strong>.  
+            Xin chào! Mình là <strong>Kim Khánh</strong>.  
             Mình đam mê học ngôn ngữ và copywriting theo hướng direct-response.  
             Khi rảnh mình thích <strong>bơi</strong>, <strong>đi biển</strong> và đọc <em>The Perfection Trap</em>.  
             Đây là góc chia sẻ nhỏ để mọi người hiểu hơn về mình và hành trình mình đang xây dựng 🌱
