@@ -6,9 +6,9 @@
   <title>Portfolio — Khánh</title>
 
   <!-- SEO / Social sharing tags (giữ cấu trúc giống trang mẫu) -->
-  <meta property="og:title" content="Portfolio — Khánh" />
+  <meta property="og:title" content="Portfolio — Kim Khánh" />
   <meta property="og:locale" content="vi_VN" />
-  <meta property="og:site_name" content="Khánh Portfolio" />
+  <meta property="og:site_name" content="Kim Khánh Portfolio" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta property="twitter:title" content="Portfolio — Khánh" />
@@ -126,7 +126,7 @@
     <div class="card">
       <div class="left">
         <div class="avatar">
-          <img src="https://raw.githubusercontent.com/daisubinta/Nhom4tin12anh.github.io/refs/heads/main/t%E1%BA%A3i%20xu%E1%BB%91ng.jfif" alt="Ảnh cá nhân Khánh" />
+          <img src="(https://raw.githubusercontent.com/daisubinta/Nhom4tin12anh.github.io/refs/heads/main/golden-retriever-tongue-out.jpg)" alt="Ảnh cá nhân Khánh" />
         </div>
       </div>
 
@@ -137,7 +137,7 @@
         <div class="about">
           <p>
             Xin chào! Mình là <strong>Khánh</strong>.  
-            Mình đam mê học ngôn ngữ (English, Spanish, Chinese) và copywriting theo hướng direct-response.  
+            Mình đam mê học ngôn ngữ và copywriting theo hướng direct-response.  
             Khi rảnh mình thích <strong>bơi</strong>, <strong>đi biển</strong> và đọc <em>The Perfection Trap</em>.  
             Đây là góc chia sẻ nhỏ để mọi người hiểu hơn về mình và hành trình mình đang xây dựng 🌱
           </p>
