@@ -132,7 +132,7 @@
 
       <div class="right">
         <h2>Khánh</h2>
-        <div class="meta">🎓 Học sinh lớp 11</div>
+        <div class="meta">🎓 Học sinh lớp 12A</div>
 
         <div class="about">
           <p>
