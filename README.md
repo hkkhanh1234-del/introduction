@@ -126,7 +126,7 @@
     <div class="card">
       <div class="left">
         <div class="avatar">
-          <img src="(https://raw.githubusercontent.com/daisubinta/Nhom4tin12anh.github.io/refs/heads/main/golden-retriever-tongue-out.jpg)" alt="Ảnh cá nhân Khánh" />
+          <img src="(https://githubusercontent.com/daisubinta/Nhom4tin12anh.github.io/refs/heads/main/golden-retriever-tongue-out.jpg)" alt="Ảnh cá nhân Khánh" />
         </div>
       </div>
 
