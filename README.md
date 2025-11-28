@@ -118,7 +118,7 @@
 
 <body>
   <header>
-    <h1>Khánh Portfolio</h1>
+    <h1>Giới thiệu bản thân </h1>
     <p>✍️ Copywriter • 📘 Ngôn ngữ • 🌊 Người yêu biển</p>
   </header>
 
