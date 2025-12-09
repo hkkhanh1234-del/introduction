@@ -261,7 +261,7 @@ body.dark .cat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(2
       </div>
 
       <div class="intro">
-        <h1>Xin chào! Mình là Khánh 👋</h1>
+        <h1>Xin chào! Mình là Kim Khánh 👋</h1>
         <p class="lead">
           Học sinh lớp 12A — thích làm web aesthetic, học tiếng Anh và sáng tạo nội dung.
           Mình xây web này để lưu hành trình IELTS, chia sẻ dự án copywriting, và trưng những bài tập thiết kế.
@@ -279,7 +279,7 @@ body.dark .cat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(2
     <h2>Về mình</h2>
     <p>
       Mình là <strong>Kim Khánh</strong>, học sinh lớp 12A. Mình thích kết hợp ngôn ngữ, thẩm mỹ và tư duy marketing để tạo nội dung có cảm xúc.
-      Mục tiêu hiện tại: <strong>IELTS 8.0</strong> và cải thiện portfolio freelance trong copywriting.
+      Mục tiêu hiện tại: <strong>IELTS </strong> và cải thiện portfolio freelance trong copywriting.
     </p>
 
     <ul style="margin-top:12px; color:var(--muted);">
@@ -296,7 +296,7 @@ body.dark .cat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(2
     <div class="category-grid">
       <div class="cat" data-key="ielts">
         <h3>IELTS</h3>
-        <p style="font-weight:500;color:var(--muted);margin-top:6px">Tips, bài luyện, bài mẫu Speaking & Writing, roadmap từ 7 → 8.0</p>
+        <p style="font-weight:500;color:var(--muted);margin-top:6px">Tips, bài luyện, bài mẫu Speaking & Writing, roadmap </p>
       </div>
 
       <div class="cat" data-key="copy">
