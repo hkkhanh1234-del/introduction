@@ -369,6 +369,7 @@ body.dark .cat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(2
       </iframe>
       <p class="music-title">Bài 3</p>
     </div>
+  </div>
 </section>
 
 <style>
