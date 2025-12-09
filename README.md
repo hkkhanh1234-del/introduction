@@ -368,6 +368,9 @@ body.dark .cat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(2
   </section>
 
   <div class="footer">Made with 💙 by Khánh — design & code</div>
+   <a class="back-btn" href="https://daisubinta.github.io/Nhom4tin12anh.github.io/">
+    ← Quay lại trang chính
+  </a>
 </div>
 
 <!-- ================= SCRIPTS: typing, dark, fade, smooth nav, categories ================= -->
