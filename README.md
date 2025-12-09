@@ -369,18 +369,6 @@ body.dark .cat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(2
       </iframe>
       <p class="music-title">Bài 3</p>
     </div>
-
-    <!-- Bài 4 -->
-    <div class="music-item">
-      <iframe width="100%" height="260"
-        src="https://www.youtube.com/embed/4eCtPlJ0aQ8?rel=0"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-      <p class="music-title">Bài 4</p>
-    </div>
-  </div>
 </section>
 
 <style>
