@@ -1,148 +1,293 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Khánh — Cuốn sổ học tập & sáng tạo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kim Khánh — Personal Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+<style>
+/* ================= THEME ================= */
+:root{
+  --blue-1:#d9ecff;
+  --blue-2:#bedbff;
+  --glass:#ffffffdd;
+  --card:#ffffffee;
+  --text:#1c2b3a;
+  --muted:#5c6b7a;
+  --accent:#65a8ff;
+  --accent-2:#3f7fe0;
+  --radius:18px;
+  --shadow:0 12px 32px rgba(40,80,140,0.12);
+  --shadow-soft:0 10px 24px rgba(40,80,140,0.08);
+}
 
-  <style>
-    :root {
-      --dark-bg: #0b1e28;
-      --light-bg: #f0f9ff;
-      --accent: #0e7490;
-      --text-dark: #042635;
-      --text-light: #e4faff;
-      --card-bg: rgba(255,255,255,0.9);
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: Inter, sans-serif; line-height:1.6; background: var(--light-bg); color: var(--text-dark); transition: background 0.4s, color 0.4s; }
-    a { color: inherit; text-decoration: none; }
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Inter",system-ui;
+  background:linear-gradient(180deg,var(--blue-1),var(--blue-2));
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  line-height:1.55;
+}
 
-    /* Dark mode */
-    .dark-mode { background: var(--dark-bg); color: var(--text-light); }
+/* ================= HEADER ================= */
+.header{
+  position:relative;
+  padding:40px 20px 70px;
+  overflow:hidden;
+}
 
-    /* Navbar fixed + minimal */
-    nav {
-      position: fixed; top:0; left:0; right:0; z-index:100;
-      display: flex; justify-content: space-between; align-items: center;
-      padding:16px 8%; background: rgba(255,255,255,0.72); backdrop-filter: blur(10px);
-    }
-    .dark-mode nav { background: rgba(11,30,40,0.8); }
-    nav .site-name { font-weight:700; font-size:20px; }
-    nav .toggle-dark { cursor:pointer; font-size:18px; }
+.header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,60,150,0.45),rgba(0,60,150,0.25)),
+             url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80");
+  background-size:cover;
+  background-position:center;
+  filter:brightness(0.7);
+}
 
-    /* Hero / Cover */
-    header.hero {
-      min-height:100vh; display:flex; align-items:center; justify-content:center;
-      text-align:center; padding:0 20px;
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400') center/cover no-repeat;
-      color: white;
-      position: relative;
-    }
-    header.hero::before {
-      content:''; position:absolute; inset:0;
-      background: rgba(0,0,0,0.4);
-    }
-    header.hero .inner { position: relative; z-index:2; }
-    .hero .title { font-family: 'Playfair Display', serif; font-size:48px; font-weight:800; margin-bottom:18px; }
-    .hero .subtitle { font-size:20px; opacity:0.9; }
+.header-inner{
+  position:relative;
+  z-index:2;
+  max-width:1080px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-    main { padding-top:80px; }
+.brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
 
-    section { max-width:850px; margin:80px auto; padding:0 20px; }
-    h2 { font-size:24px; color: var(--accent); margin-bottom:14px; }
+.logo{
+  width:74px;height:74px;
+  border-radius:20px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  display:grid;place-items:center;
+  color:white;
+  font-size:24px;font-weight:800;
+  box-shadow:var(--shadow);
+}
 
-    .card {
-      background: var(--card-bg);
-      border-radius:12px;
-      padding:24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      margin-bottom:28px;
-    }
+.titles .name{
+  color:white;
+  font-size:20px;
+  font-weight:800;
+}
+.titles .role{
+  color:#eef6ff;
+  font-size:13px;
+}
 
-    /* Projects / Notes list */
-    .notes-list { list-style: none; }
-    .notes-list li { margin-bottom:14px; }
+/* NAV */
+nav{
+  display:flex;
+  gap:12px;
+}
+nav a{
+  color:white;
+  padding:8px 16px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.07);
+  transition:.18s;
+}
+nav a:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+}
+nav a.active{
+  background:rgba(255,255,255,0.18);
+  transform:translateY(-4px);
+}
 
-    /* Avatar / image art style */
-    .avatar {
-      width:180px; height:180px; border-radius:50%; overflow:hidden;
-      margin:30px auto; box-shadow: 0 10px 26px rgba(0,0,0,0.2);
-    }
-    .avatar img { width:100%; height:100%; object-fit:cover; }
+/* ================= CARDS ================= */
+.container{
+  max-width:1080px;
+  margin:-40px auto 60px;
+  padding:20px;
+  position:relative;
+  z-index:3;
+}
 
-    footer { text-align:center; padding:40px 20px; font-size:14px; opacity:0.75; }
-  </style>
+.card{
+  background:var(--card);
+  padding:24px;
+  border-radius:var(--radius);
+  margin-bottom:26px;
+  box-shadow:var(--shadow-soft);
+  border:1px solid rgba(0,0,0,0.04);
+}
+
+/* HOME */
+.home{
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.hero-photo{
+  width:260px;height:260px;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:6px solid rgba(255,255,255,0.6);
+}
+
+.hero-photo img{
+  width:100%;height:100%;object-fit:cover;
+}
+
+.intro h1{
+  margin:0 0 10px;
+  font-size:28px;
+  font-weight:800;
+}
+
+.lead{
+  color:var(--muted);
+  max-width:420px;
+}
+
+/* ABOUT */
+.two-col{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:20px;
+}
+
+.photo{
+  border-radius:20px;
+  overflow:hidden;
+  border:6px solid rgba(255,255,255,0.6);
+  box-shadow:var(--shadow);
+}
+
+.photo img{
+  width:100%;height:100%;object-fit:cover;
+}
+
+ul.clean{color:var(--muted);margin-left:20px}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  color:var(--muted);
+  padding:20px 0 50px;
+}
+</style>
 </head>
 
 <body>
 
-<nav>
-  <div class="site-name">Khánh’s Space</div>
-  <div class="toggle-dark">🌙</div>
-</nav>
+<header class="header">
+  <div class="header-inner">
 
-<header class="hero">
-  <div class="inner">
-    <h1 class="title">Một cuốn sổ nhỏ — học, sống & sáng tạo</h1>
-    <p class="subtitle">Ghi chép hành trình học tập, sở thích, và những ý tưởng vụn vặt tuổi 17.</p>
+    <div class="brand">
+      <div class="logo">KK</div>
+      <div class="titles">
+        <div class="name">Kim Khánh</div>
+        <div class="role">Lớp 12A — Portfolio cá nhân</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#home" class="active">Trang chủ</a>
+      <a href="#about">Về tôi</a>
+      <a href="#study">Học tập</a>
+      <a href="#hobbies">Sở thích</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+
   </div>
 </header>
 
-<main>
-  <!-- About -->
-  <section>
-    <h2>Về mình</h2>
-    <div class="card">
-      <p>Mình là học sinh cấp 3, yêu thích tiếng Anh, viết lách, đọc sách và học thuật. Trang web này là góc nhỏ để mình ghi lại suy nghĩ, trải nghiệm, và những gì mình học được mỗi ngày.</p>
-    </div>
-  </section>
+<main class="container">
 
-  <!-- Học tập & Ghi chú -->
-  <section>
-    <h2>Học tập & ghi chú</h2>
-    <ul class="notes-list">
-      <li>📘 Ôn từ vựng tiếng Anh mỗi ngày</li>
-      <li>🧠 Rèn tư duy logic bằng bài toán</li>
-      <li>🎯 Luyện kỹ năng viết & dịch — tiếng Anh / tiếng Trung</li>
-      <li>💻 Học HTML & CSS — tự làm web cá nhân</li>
-    </ul>
-  </section>
-
-  <!-- Sở thích & Cuộc sống -->
-  <section>
-    <h2>Sở thích & cuộc sống</h2>
-    <div class="card">
-      <p>Mỗi khi rảnh: mình đọc sách, nghe nhạc, viết nhật ký, đi biển hoặc hóng hoàng hôn — để thư giãn và lấy cảm hứng.</p>
+<section id="home" class="card">
+  <div class="home">
+    <div class="hero-photo">
+      <!-- Avatar art-style bạn dùng ảnh gì thì thay -->
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80">
     </div>
-  </section>
 
-  <!-- Ví dụ ghi chép / note nhỏ -->
-  <section>
-    <h2>Ghi chép & thử nghiệm</h2>
-    <div class="card">
-      <p>✅ Ghi chú IELTS, mind-map học từ vựng</p>
-      <p>✨ Layout báo cáo nhỏ bằng HTML/CSS</p>
-      <p>📝 Ghi lại cảm xúc, nhật ký học & cuộc sống</p>
+    <div class="intro">
+      <h1>Xin chào! Mình là Khánh 👋</h1>
+      <p class="lead">
+        Học sinh lớp 12A, thích ngôn ngữ, sáng tạo và xây dựng những không gian đẹp — như chính website này.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
+
+<section id="about" class="card">
+  <h2>Về mình</h2>
+
+  <div class="two-col">
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=900&q=80">
+    </div>
+
+    <div>
+      <p>
+        Mình là <b>Kim Khánh</b> — người thích học, thích làm, thích thử mọi thứ mới.
+        Cuộc sống của mình xoay quanh việc khám phá, sáng tạo và biến những điều nhỏ thành đẹp.
+      </p>
+
+      <ul class="clean">
+        <li>Phong cách: minimal – aesthetic – creative</li>
+        <li>Sở thích: English, copywriting, thiết kế web</li>
+        <li>Màu yêu thích: xanh biển</li>
+        <li>Goal hiện tại: IELTS 8.0 và ĐGNL 1000+</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="study" class="card">
+  <h2>Học tập</h2>
+
+  <ul class="clean">
+    <li>Học tiếng Anh mỗi ngày</li>
+    <li>Luyện IELTS: Reading, Writing, Speaking</li>
+    <li>Tự học lập trình web (HTML/CSS/JS)</li>
+    <li>Copywriting cho dự án freelance</li>
+  </ul>
+</section>
+
+<section id="hobbies" class="card">
+  <h2>Sở thích</h2>
+
+  <ul class="clean">
+    <li>Đọc sách (self-help, kinh tế, ngôn ngữ)</li>
+    <li>Làm web aesthetic</li>
+    <li>Viết lách, làm content, email marketing</li>
+    <li>Học tiếng mới: English, Spanish, Chinese</li>
+  </ul>
+</section>
+
+<section id="contact" class="card">
+  <h2>Liên hệ</h2>
+  <p>Nếu bạn muốn kết nối, hợp tác hoặc học chung, hãy nhắn nhé!</p>
+  <ul class="clean">
+    <li>Email: yourmail@example.com (bạn sửa)</li>
+    <li>Instagram: @yourhandle</li>
+  </ul>
+</section>
+
+<div class="footer">Made with 💙 by Khánh</div>
+
 </main>
-
-<footer>
-  © <span id="year"></span> — Một góc nhỏ của Khánh  
-</footer>
-
-<script>
-  // dark mode toggle
-  const btn = document.querySelector('.toggle-dark');
-  btn.onclick = () => {
-    document.body.classList.toggle('dark-mode');
-  };
-  // auto year
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
 </body>
 </html>
